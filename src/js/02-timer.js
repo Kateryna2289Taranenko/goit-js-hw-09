@@ -41,7 +41,7 @@ function startTimer() {
     Notify.success('Time end');
     return;
   }
-  formatDate = convertMs(differenceTime);
+  let formatDate = convertMs(differenceTime);
   renderDate(formatDate);
 }
 function renderDate(formatDate) {

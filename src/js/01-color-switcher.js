@@ -11,8 +11,11 @@ function getBgColor() {
   bodyColor.style.backgroundColor = getRandomHexColor();
 }
 const onStartClick = () => {
+  if (startBtnEl.getAttribute('disabled') === true) {
+    return;
+  }
   intervalId = setInterval(getBgColor, 1000);
-  startBtnEl.toggleAttribute('disabled');
+  startBtnEl.setAttribute('disabled', true);
 };
 startBtnEl.addEventListener('click', onStartClick);
 function onStopClick() {

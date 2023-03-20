@@ -4,7 +4,7 @@ let delay = null;
 formEl.addEventListener('submit', onSusmitForm);
 function onSusmitForm(evt) {
   evt.preventDefault();
-  delay = formEl.delay.value;
+  delay = Number(formEl.delay.value);
   for (let i = 1; i <= formEl.amount.value; i += 1) {
     createPromise(i, delay)
       .then(({ position, delay }) => {
@@ -13,7 +13,7 @@ function onSusmitForm(evt) {
       .catch(({ position, delay }) => {
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
-    delay += formEl.step.value;
+    delay += Number(formEl.step.value);
   }
 }
 function createPromise(position, delay) {
