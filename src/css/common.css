@@ -16,3 +16,34 @@ img {
   display: block;
   max-width: 100%;
 }
+.button{
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  display: inline-block;
+  padding: 10px 52px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  margin-top: 30px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button:focus, .button:hover {
+  background-color: #188ce8;
+}
+.timer{
+  display: flex;
+  gap: 20px;
+}
+.field{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px
+}
+.value{
+  color: #188ce8;
+}
